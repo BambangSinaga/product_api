@@ -73,7 +73,7 @@ RSpec.describe 'Api::V1::ProductsController', type: :request do
 
       it 'returns a validation failure message' do
         expect(response.body)
-          .to eql "{\"message\":\"Validation failed: Price can't be blank, Category can't be blank, Email can't be blank\"}"
+          .to eql "{\"message\":\"Validation failed: Price can't be blank, Category can't be blank, Email can't be blank, Email Email invalid\"}"
       end
     end
   end
