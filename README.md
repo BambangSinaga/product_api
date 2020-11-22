@@ -7,11 +7,11 @@ Postman collection https://documenter.getpostman.com/view/13585458/TVev4k6c
 * Ruby version: 2.6.6
 
 * run on local
-go to repository folder
-`bundle install`
-`bundle exec rails db:create`
-`bundle exec rails db:migrate`
-`bundle exec rails s`
+1. go to repository folder
+2. `bundle install`
+3. `bundle exec rails db:create`
+4. `bundle exec rails db:migrate`
+5. `bundle exec rails s`
 
 * run rspec
 `bundle exec rspec`
