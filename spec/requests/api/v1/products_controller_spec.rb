@@ -54,6 +54,9 @@ RSpec.describe 'Api::V1::ProductsController', type: :request do
 
       it 'creates a product' do
         expect(json['name']).to eq('pizza')
+        expect {
+          UpdateProductStatusJob.perform_later(json['id'])
+        }.to have_enqueued_job
       end
 
       it 'returns status code 201' do

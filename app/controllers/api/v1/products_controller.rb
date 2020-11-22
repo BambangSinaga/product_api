@@ -12,6 +12,8 @@ module Api
       # POST /products
       def create
         @product = Product.create!(product_params)
+        UpdateProductStatusJob.set(wait: 3.minutes).perform_later(@product.id)
+
         json_response(@product, :created)
       end
 
