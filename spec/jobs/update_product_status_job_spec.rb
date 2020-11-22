@@ -11,7 +11,7 @@ RSpec.describe UpdateProductStatusJob, type: :job do
 
   describe '#perform' do
     it 'sends email to the given product' do
-      expect(ProductMailer).to receive_message_chain(:add_product_success, :deliver_later).with(product.id).with(no_args)
+      expect(ProductMailer).to receive_message_chain(:add_product_success, :deliver_now).with(product).with(no_args)
 
       perform_enqueued_jobs { described_class.perform_now(product.id) }
     end

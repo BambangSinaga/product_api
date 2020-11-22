@@ -7,7 +7,7 @@
   <body>
     <h1>Berikut ini adalah produk yang baru saja anda tambahkan:</h1>
     <p>
-      <%= @product.image_url %>
+      <%= image_tag(Rails.application.routes.url_helpers.url_for(@product.image)) if @product.image.attached? %>
     </p>
     <p>
       <%= @product.name %>
@@ -19,8 +19,8 @@
       <%= @product.category %>
     </p>
     <p>
-      <%= @product.status %>
+      <%= @product.is_status %>
     </p>
-    <p>Thanks for joining and have a great day!</p>
+    <p>Thanks for add your product and have a great day!</p>
   </body>
 </html>
