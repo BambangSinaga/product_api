@@ -34,5 +34,6 @@ module ProductApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.active_job.queue_adapter = :sidekiq
+    Rails.application.routes.default_url_options[:host] = ENV['APP_HOSTNAME']
   end
 end
