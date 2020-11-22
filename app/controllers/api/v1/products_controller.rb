@@ -36,7 +36,7 @@ module Api
 
       def product_params
         # whitelist params
-        params.permit(:name, :category, :email, :price)
+        params.permit(:name, :category, :email, :price, :image)
       end
 
       def set_product
