@@ -2,23 +2,16 @@
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
+Postman collection https://documenter.getpostman.com/view/13585458/TVev4k6c
 
-Things you may want to cover:
+* Ruby version: 2.6.6
 
-* Ruby version
+* run on local
+go to repository folder
+`bundle install`
+`bundle exec rails db:create`
+`bundle exec rails db:migrate`
+`bundle exec rails s`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* run rspec
+`bundle exec rspec`
